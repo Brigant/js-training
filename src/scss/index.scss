@@ -1,5 +1,28 @@
-$red: red;
+@use "normalize.css";
+@use "_variables.scss";
+@use "_mixin.scss";
+@use "header.scss";
+@use "toolbar.scss";
+@use "formula.scss";
+@use "table.scss";
+@use "dashboard.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
 body {
-    background-color: $red;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+.excel {
+    position: relative;
+    height: 100vh;
+    padding: 10px;
+    max-width: 100%;
 }

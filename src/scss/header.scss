@@ -1,0 +1,36 @@
+@use 'variables' as *;
+@use "mixin";
+
+.excel__header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: $header-height;
+    padding: 3px 5px 0;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+
+    & .input {
+        margin: 0;
+        min-width: 180px;
+        height: 28px;
+        padding: 2px 7px;
+        border: 1px solid $border-color;
+        border-radius: $border-radius;
+        outline: none;
+
+        &:focus {
+            border: 2px solid $border-color-focus;
+        }
+
+        &:hover {
+            border: 2px solid $border-color-hover;
+        }
+    }
+
+    .button {
+        @include mixin.button-style(green);
+    }
+}
