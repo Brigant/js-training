@@ -1,0 +1,20 @@
+@use 'variables' as *;
+@use "mixin";
+
+.excel__toolbar {
+    background-color: #ffffff;
+    position: absolute;
+    top: $header-height;
+    left: 0;
+    right: 0;
+    height: $toolbar-heigt;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    padding: 7px 10px;
+    display: flex;
+    align-items: center;
+
+    .button {
+        @include mixin.button-style(green);
+    }
+}

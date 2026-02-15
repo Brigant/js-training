@@ -1,0 +1,100 @@
+@use "variables" as *;
+@use "mixin";
+
+.db {
+
+
+    &__header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: $db-header-height;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    &__new {
+        margin-top: $db-header-height;
+        padding: 1.5rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background: #dadce0;
+    }
+
+
+    &__create {
+        width: 160px;
+        height: 160px;
+        background: #fff;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--color-primary);
+        text-decoration: none;
+        border: 1px solid $border-color;
+
+        &:hover {
+            cursor: pointer;
+            color: $border-color-hover;
+            border-color: $border-color-hover;
+        }
+    }
+
+    &__view {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    &__table {
+        padding: 1.5rem;
+    }
+
+    &__list-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+        color: #202124;
+        font-weight: 500;
+        font-size: 16px;
+        margin-bottom: 10px;
+        padding: 0 12px;
+    }
+
+    &__list {
+        @include mixin.clear-list;
+    }
+
+    &__record {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid $border-color;
+
+        &:hover {
+            background-color: #eeeeee;
+            border-radius: 25px;
+        }
+
+        a {
+            cursor: pointer;
+            text-decoration: none;
+            color: #202124;
+            font-weight: 500;
+            font-size: 16px;
+
+            &:hover {
+                color: $border-color-hover;
+                text-decoration: underline;
+            }
+        }
+    }
+}
